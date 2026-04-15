@@ -11,7 +11,7 @@ const RecentProjects = () => {
         The <span className="text-purple">Jookebox Standard</span>
       </h1>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-8 mt-2 p-4 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-12 lg:gap-y-32  mt-10 p-4 max-w-6xl mx-auto">
         {projects.map((item, idx) => (
           <div
             key={item.id}
