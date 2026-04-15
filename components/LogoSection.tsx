@@ -5,7 +5,7 @@ import React from 'react';
 
 export const LogoSection = () => {
   return (
-    <div className="w-full py-10">
+   <div className="w-full py-10 md:py-20 flex flex-col items-center justify-center">
       <div className="marquee">
         <div className="marquee-box">
         
