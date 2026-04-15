@@ -60,7 +60,7 @@ const Hero = () => {
             We provide curated background music and personalized radio as a service.
           </p>
 
-          <a href="#projects">
+          <a href="#about">
             <MagicButton
               title="Explore Solutions"
               icon={<FaLocationArrow />}
