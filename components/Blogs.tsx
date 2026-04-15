@@ -19,7 +19,7 @@ const Blogs = () => {
           className="h-[50vh] md:h-[30rem] rounded-md flex flex-col antialiased  items-center justify-center relative overflow-hidden"
         >
           <InfiniteMovingCards
-            items={blogs}
+            items={blogs.map((blog) => ({ ...blog, title: blog.name }))}
             direction="right"
             speed="slow"
           />
