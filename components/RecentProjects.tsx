@@ -1,28 +1,22 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
-
 import React from "react";
 import { projects } from "@/data";
 import { PinContainer } from "./ui/pin";
 
 const RecentProjects = () => {
   return (
-    <div className="py-20 w-full" id="about">
+    <div className="py-10 w-full" id="about">
       <h1 className="heading">
-        The {" "}
-        <span className="text-purple">Jookebox Standard</span>
+        The <span className="text-purple">Jookebox Standard</span>
       </h1>
 
-      {/* 1. The Container Fix: Added max-w-6xl to keep them grouped in the center */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-10 md:gap-y-16  mt-5 md:mt-10 p-4 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-2  mt-2 p-4 max-w-6xl mx-auto">
         {projects.map((item) => (
           <div
             key={item.id}
-            // 2. The Card Wrapper: Reduced width slightly to 450px to ensure they fit side-by-side
             className="flex items-center justify-center sm:w-[450px] w-full max-w-[90vw] h-[32rem] lg:h-[35rem] mx-auto"
           >
-            <PinContainer title={item.title}>
-              {/* Image Container: Full width of the card */}
+            <PinContainer title={item.title} href={item.title}>
               <div className="relative flex items-center justify-center sm:w-[450px] w-[80vw] overflow-hidden h-[25vh] lg:h-[30vh] mb-10">
                 <div
                   className="relative w-full h-full overflow-hidden lg:rounded-3xl"
@@ -30,29 +24,23 @@ const RecentProjects = () => {
                 >
                   <img src="/bg.png" alt="bgimg" className="w-full h-full object-cover" />
                 </div>
-                
-                {/* Your project image - now showing fully */}
                 <img
                   src={item.img}
-                  alt="cover"
+                  alt={item.title}
                   className="z-10 absolute object-cover h-full w-full rounded-xl"
                 />
               </div>
 
-              <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
+              <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1 text-white">
                 {item.title}
               </h1>
 
               <p
-                className="lg:text-xl lg:font-normal font-light text-sm line-clamp-5 mt-2"
+                className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2 mt-2"
                 style={{ color: "#BEC1DD" }}
               >
                 {item.des}
               </p>
-
-              <div className="flex items-center justify-between mt-7 mb-3">
-              
-              </div>
             </PinContainer>
           </div>
         ))}
