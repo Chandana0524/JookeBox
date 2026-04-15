@@ -7,19 +7,19 @@ import { PinContainer } from "./ui/pin";
 
 const RecentProjects = () => {
   return (
-    <div className="py-20 w-full" id="projects">
+    <div className="py-20 w-full" id="about">
       <h1 className="heading">
         The {" "}
         <span className="text-purple">Jookebox Standard</span>
       </h1>
 
       {/* 1. The Container Fix: Added max-w-6xl to keep them grouped in the center */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-16 mt-10 p-4 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-10 md:gap-y-16  mt-5 md:mt-10 p-4 max-w-6xl mx-auto">
         {projects.map((item) => (
           <div
             key={item.id}
             // 2. The Card Wrapper: Reduced width slightly to 450px to ensure they fit side-by-side
-            className="flex items-center justify-center sm:w-[450px] w-[90vw] h-[32rem] lg:h-[35rem] mx-auto"
+            className="flex items-center justify-center sm:w-[450px] w-full max-w-[90vw] h-[32rem] lg:h-[35rem] mx-auto"
           >
             <PinContainer title={item.title}>
               {/* Image Container: Full width of the card */}
